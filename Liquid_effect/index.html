@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    </h1>
+    <div class="container">
+        <div id="particle-1"></div>
+        <div id="particle-2"></div>
+        <div id="bar-1"></div>
+        <div id="bar-2"></div>
+        <div id="bar-3"></div>
+        </div>
+    </div>
+    <svg>
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="4"  />
+                <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                <!-- <feBlend in="SourceGraphic" /> -->
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+
+                <!-- <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"/> -->
+            </filter>
+        </defs>
+    </svg>
+</body>
+</html>
+
+
+<!-- <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+                <feColorMatrix in="name" mode="matrix"
+                    values='1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 0 30 -15' />
+                <feBlend in="SourceGraphic"/> -->
